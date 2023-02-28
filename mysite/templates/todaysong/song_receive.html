@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if song != None %}
+    <h2>노래가 도착했어요!</h2>
+    가수: {{ song.singer }}<br>
+    곡: {{ song.name }}
+{% else %}
+    <h2>노래가 모두 소진됐어요!</h2>
+    가수: 옥상달빛<br>
+    곡: 수고했어 오늘도
+{% endif %}
+{% endblock %}

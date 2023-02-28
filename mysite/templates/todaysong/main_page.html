@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+   <a href="{% url 'todaysong:song_send' %}" class="btn btn-primary">노래 보내기</a>
+{% else %}
+    {% include "todaysong/site_explanation.html" %}
+{% endif %}
+{% endblock %}
